@@ -1,0 +1,61 @@
+
+<form
+  action="<?php echo $block->getBaseUrl().'feedback/index/post/';?>"
+  name="feedbackdata"
+  method="post"
+  data-hasrequired="<?php echo __('* Required Fields') ?>"
+  data-mage-init='{"validation":{}}'
+>
+    <fieldset class="fieldset">
+            <div class="field required">
+                <label class="label" for="name"><span>Name</span></label>
+                <div class="control">
+                    <input name="name" id="name" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email"><span>Email</span></label>
+                <div class="control">
+                    <input name="email" id="email" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="field required">
+              <label class="label" for="topic"><span>Topic</span></label>
+              <div class="control">
+                <select id="topic" name="topic" data-validate="{required:true}">
+                  <option value="">Select...</option>
+							    <option value="Customer Service">Customer Service</option>
+							    <option value="Issue for Site Manager">Issue for Site Manager</option>
+							    <option value="Login Issue">Login Issue</option>
+                  <option value="Site Complaint or Error">Site Complaint or Error</option>
+                  <option value="Site Compliment">Site Compliment</option>
+                  <option value="Site Improvement Idea">Site Improvement Idea</option>
+                </select>
+              </div>
+            </div>
+            <div class="field required">
+                <label class="label" for="url"><span>Problem Source URL</span></label>
+                <div class="control">
+                    <input name="url" id="url" class="input-text" type="text" />
+                </div>
+            </div>
+            <div class="field comment required">
+                <label class="label" for="comment"><span>Comments</span></label>
+                <div class="control">
+                    <textarea name="comment" id="comment" title="Comments" class="input-text" cols="5" rows="3" data-validate="{required:true}" aria-required="true"></textarea>
+                </div>
+            </div>
+
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="SUBMIT" class="action submit primary">
+                <span>SUBMIT</span>
+            </button>
+        </div>
+    </div>
+
+</form>
+
+
